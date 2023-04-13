@@ -31,8 +31,21 @@
    </div>
   </div>
   <script>
-    let items = document.getElementsByClassName('.list-group-item');
-    items[2].style.backgroundColor = "green";
+    // let items = document.getElementsByClassName('.list-group-item');
+    // items[2].style.backgroundColor = "green";
+    // let items = document.getElementsByTagName('.list-group-item');
+    // items[2].style.backgroundColor = "green";
+    let secondItem = document.querySelector('.list-group-item:nth-child(2)');
+    secondItem.style.backgroundColor = "green";
+    let thirdItem = document.querySelector('.list-group-item:nth-child(3)');
+    thirdItem.style.visibility = "hidden";
+    let items = document.querySelectorAll(".list-group-item");
+    items[1].style.color = "green";
+    let listItems = document.querySelectorAll("li:nth-child(odd)");
+    console.log(listItems);
+    for (listItem of listItems) {
+        listItem.style.backgroundColor = "green";
+    }
   </script>
 </body>
 </html>
